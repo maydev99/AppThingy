@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:text="Date"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Name"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:text="Phone"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

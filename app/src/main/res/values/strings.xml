@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppThingy</string>
+    <string name="list_screen">List Screen</string>
+    <string name="about">About</string>
+</resources>
