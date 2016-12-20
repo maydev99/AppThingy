@@ -2,4 +2,6 @@
     <string name="app_name">AppThingy</string>
     <string name="list_screen">List Screen</string>
     <string name="about">About</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
 </resources>

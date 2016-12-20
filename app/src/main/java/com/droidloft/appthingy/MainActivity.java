@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         
         idViews();
-        openDB();
+        //openDB();
         
         saveB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         
         
         
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        openDB();
     }
 
     private void openDB() {

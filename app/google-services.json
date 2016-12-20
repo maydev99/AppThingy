@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "462862513387",
+    "firebase_url": "https://appthingy-fa96e.firebaseio.com",
+    "project_id": "appthingy-fa96e",
+    "storage_bucket": "appthingy-fa96e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462862513387:android:40b31f66de813e68",
+        "android_client_info": {
+          "package_name": "com.droidloft.appthingy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462862513387-12caca3dlmbflklvhrdkjhl2rmkdc579.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.droidloft.appthingy",
+            "certificate_hash": "1C752E89AD16EBEBA7AEA4163E297016C32C03E0"
+          }
+        },
+        {
+          "client_id": "462862513387-oqn9k1ms5nesl80cju05jtdqud91abof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtRXmRE6j_xknxnp6sxYbBB-7rJWyi3H0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462862513387-oqn9k1ms5nesl80cju05jtdqud91abof.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
