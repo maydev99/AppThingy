@@ -86,6 +86,7 @@ public class ListScreen extends AppCompatActivity {
                     sqlDB.execSQL("DELETE FROM mytable WHERE id = '" + idx + "';");
                     Toast.makeText(ListScreen.this, "Item Deleted", Toast.LENGTH_SHORT).show();
                     mainArrayList.clear();
+                    mainArrayAdapter.notifyDataSetChanged();
                     rowList.clear();
                     getTheData();
                 }
