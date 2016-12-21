@@ -121,6 +121,31 @@ public class ListScreen extends AppCompatActivity {
         if(item.getItemId() == R.id.restore) {
 
         }
+
+        if(item.getItemId() == R.id.gen_data) {
+
+            generateData();
+
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void generateData() {
+        String date1 = "12/22/2016";
+        String name1 = "Michael";
+        String phone1 = "954-655-3839";
+        sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date1 + "','" + name1 + "','" + phone1 + "');");
+        date1 = "12/23/2016";
+        name1 = "Cate";
+        phone1 = "954-555-2148";
+        sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date1 + "','" + name1 + "','" + phone1 + "');");
+        date1 = "12/24/2016";
+        name1 = "Steve";
+        phone1 = "415-756-3448";
+        sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date1 + "','" + name1 + "','" + phone1 + "');");
+
+        Toast.makeText(ListScreen.this, "Data Added", Toast.LENGTH_SHORT).show();
+        getTheData();
+
     }
 }

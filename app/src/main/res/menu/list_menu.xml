@@ -18,4 +18,12 @@
 
     </item>
 
+    <item
+        android:id="@+id/gen_data"
+        android:title="Gen Data"
+        android:orderInCategory="12"
+        app:showAsAction="never">
+
+    </item>
+
 </menu>
