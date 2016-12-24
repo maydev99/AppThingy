@@ -65,7 +65,7 @@ public class ListScreen extends AppCompatActivity {
         mainArrayList = new ArrayList<>();
         rowList = new ArrayList<>();
         mainArrayAdapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.list_item_item, mainArrayList);
-        cursor = sqlDB.rawQuery("SELECT * FROM mytable ORDER BY date ", null);
+        cursor = sqlDB.rawQuery("SELECT * FROM mytable ORDER BY date DESC", null);
         int idColumn = cursor.getColumnIndex("id");
         int dateColumn = cursor.getColumnIndex("date");
         int nameColumn = cursor.getColumnIndex("name");
