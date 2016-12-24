@@ -35,7 +35,7 @@ public class ListScreen extends AppCompatActivity {
     private GridView gridView;
     private SQLiteDatabase sqlDB;
     private ArrayList<String> mainArrayList;
-    private  ArrayList<String>rowList;
+    private ArrayList<String> rowList;
     private ArrayAdapter<String> mainArrayAdapter;
     private Cursor cursor;
     private List retrieveList;
@@ -57,7 +57,6 @@ public class ListScreen extends AppCompatActivity {
         getTheData();
 
 
-
     }
 
     private void getTheData() {
@@ -77,8 +76,8 @@ public class ListScreen extends AppCompatActivity {
         }*/
 
 
-        if(cursor != null && cursor.getCount() > 0) {
-            do{
+        if (cursor != null && cursor.getCount() > 0) {
+            do {
                 String id = cursor.getString(idColumn);
                 String date = cursor.getString(dateColumn);
                 String name = cursor.getString(nameColumn);
@@ -89,7 +88,6 @@ public class ListScreen extends AppCompatActivity {
                 mainArrayList.add(phone);
                 rowList.add(id);
             } while (cursor.moveToNext());
-
 
 
             gridView.setAdapter(mainArrayAdapter);
@@ -115,10 +113,10 @@ public class ListScreen extends AppCompatActivity {
     }
 
     private void idViews() {
-        dateColTV = (TextView)findViewById(R.id.dateColTextView);
-        nameColTV = (TextView)findViewById(R.id.nameColTextView);
-        phoneColTV = (TextView)findViewById(R.id.phoneColTextView);
-        gridView = (GridView)findViewById(R.id.grid_view);
+        dateColTV = (TextView) findViewById(R.id.dateColTextView);
+        nameColTV = (TextView) findViewById(R.id.nameColTextView);
+        phoneColTV = (TextView) findViewById(R.id.phoneColTextView);
+        gridView = (GridView) findViewById(R.id.grid_view);
 
     }
 
@@ -130,19 +128,15 @@ public class ListScreen extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.backup) {
+        if (item.getItemId() == R.id.backup) {
             backupDataToCloud();
         }
 
-        if(item.getItemId() == R.id.restore) {
+        if (item.getItemId() == R.id.restore) {
             restoreDataFromCloud();
         }
 
-        if(item.getItemId() == R.id.gen_data) {
 
-            generateData();
-
-        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -156,26 +150,25 @@ public class ListScreen extends AppCompatActivity {
                     retrieveList.add((String.valueOf(dsp.getValue())));
 
                 }
-                Log.d("Retrieved Data: " , "DATA: " + retrieveList);
+                //Log.d("Retrieved Data: ", "DATA: " + retrieveList);
 
                 int totalCount = 0;
                 int count = 0;
-                for(int i = 0; i < retrieveList.size(); i++){
+                for (int i = 0; i < retrieveList.size(); i++) {
 
-                    if(count < 4) {
+                    if (count < 4) {
                         String text = (String) retrieveList.get(i);
-                        if(count == 0){
+                        if (count == 0) {
                             date2 = text;
                         }
 
-                        if(count == 1) {
+                        if (count == 1) {
                             name2 = text;
                         }
 
-                        if(count == 2) {
+                        if (count == 2) {
                             phone2 = text;
                             count = -1;
-                            Log.d("DATA BLOCKS: ", "DATA BLOCKS " + date2 + "" + "\n" + name2 + "\n" + phone2);
                             sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date2 + "','" + name2 + "','" + phone2 + "');");
                         }
 
@@ -197,30 +190,12 @@ public class ListScreen extends AppCompatActivity {
 
     private void backupDataToCloud() {
         listRef.removeValue();
-        for(int i = 0; i < mainArrayList.size(); i++) {
+        for (int i = 0; i < mainArrayList.size(); i++) {
             String item = mainArrayList.get(i);
             listRef.push().setValue(item);
         }
     }
-    
-    
-    //Remove This Later
-    private void generateData() {
-        String date1 = "12/22/2016";
-        String name1 = "Michael";
-        String phone1 = "954-655-3839";
-        sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date1 + "','" + name1 + "','" + phone1 + "');");
-        date1 = "12/23/2016";
-        name1 = "Cate";
-        phone1 = "954-555-2148";
-        sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date1 + "','" + name1 + "','" + phone1 + "');");
-        date1 = "12/24/2016";
-        name1 = "Steve";
-        phone1 = "415-756-3448";
-        sqlDB.execSQL("INSERT INTO mytable (date, name, phone) VALUES('" + date1 + "','" + name1 + "','" + phone1 + "');");
 
-        Toast.makeText(ListScreen.this, "Data Added", Toast.LENGTH_SHORT).show();
-        getTheData();
 
-    }
+
 }
