@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp">
 
 
 
@@ -17,7 +18,7 @@
             android:layout_width="0dp"
             android:textSize="20sp"
             android:textColor="@android:color/black"
-            android:gravity="center_horizontal"
+            android:gravity="left"
             android:layout_height="wrap_content"
             android:id="@+id/dateColTextView"
             android:layout_weight="1" />
@@ -27,7 +28,7 @@
             android:layout_width="0dp"
             android:textSize="20sp"
             android:textColor="@android:color/black"
-            android:gravity="center_horizontal"
+            android:gravity="left"
             android:layout_height="wrap_content"
             android:id="@+id/nameColTextView"
             android:layout_weight="1"/>
@@ -37,7 +38,7 @@
             android:layout_width="0dp"
             android:textSize="20sp"
             android:textColor="@android:color/black"
-            android:gravity="center_horizontal"
+            android:gravity="left"
             android:layout_height="wrap_content"
             android:id="@+id/phoneColTextView"
             android:layout_weight="1"/>
